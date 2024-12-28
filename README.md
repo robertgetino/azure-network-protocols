@@ -28,7 +28,7 @@ In this tutorial, we observe various network traffic to and from Azure Virtual M
 - Step 1: Create a Resource Group, Windows 10 VM and Linux VM on Microsoft Azure
 - Step 2: Using Remote Desktop to use the Windows 10 VM and use WireShark to observe ICMP traffic
 - Step 3: Configuring a Firewall within Wireshark (Network Security Group)
-- Step 4: Also use WireShark to observe HTTP/S and RDH traffic
+- Step 4: Also use WireShark to observe DHCP and DNS traffic
 
 <h2>Actions and Observations</h2>
 
@@ -52,14 +52,6 @@ In Step 2, I use the Windows 10 Virtual Machine to install Wireshark. Next I fil
 <img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-</p>
-<br />
-
-<p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-</p>
-<p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+In Step 3, I configure a Firewall within WireShark. I begin by initiating a non-stop ping on the Windows 10 VM to the Ubuntu VM. Next, I go to the Ubuntu VM Network Security Group and disable ICMP traffic. I observed that traffic in the Windows 10 VM. I then reenabled the ICMP traffic in Ubuntu in the Network Security Group. Finally, I disable the non-stop ping in Windows.
 </p>
 <br />
