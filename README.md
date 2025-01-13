@@ -39,7 +39,7 @@ In this project, I create a resource group named RG-Network-Activities. Within t
 <img src="https://github.com/robertgetino/azure-network-protocols/blob/e22ab72ae3d99c3974fcb40bb520e01ce1bab9d9/ICMP.png" height="80%" width="80%" alt="Disk Sanitization Steps"> <img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"> <img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"> <img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-Next, after I install Wireshark, I filter to ICMP traffic only, then connect to the Linux VM and attempt to ping it from within the Windows 10 VM. I observe the ping requests and replies in Wireshark. Finally, I open a command line in the Windows 10 VM and ping a public website and observe the traffic in Wireshark.
+After I install Wireshark, I filter to ICMP traffic only, then connect to the Linux VM and attempt to ping it from within the Windows 10 VM, using Windows PowerShell. I observe the ping requests and replies Next, I configure a firewall, by initiating a non-stop ping from the Windows 10 VM to the Linux VM. In order to do this, I open a Network Security Group in the Linux VM on Microsoft Azure. I create a new security rule to block any inbound ICMP traffic from the Windows VM to the Linux VM. I then observe that the ICMP traffic on PowerShell gets timed out. I then stop the ping activity and delete the security rule.
 </p>
 <br />
 
