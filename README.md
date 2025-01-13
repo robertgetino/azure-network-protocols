@@ -44,9 +44,9 @@ After I install Wireshark, I filter to ICMP traffic only, then connect to the Li
 <br />
 
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"> <img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-In Step 3, I configure a Firewall within WireShark. I begin by initiating a non-stop ping on the Windows 10 VM to the Ubuntu VM. Next, I go to the Ubuntu VM Network Security Group and disable ICMP traffic. I observed that traffic in the Windows 10 VM. I then reenabled the ICMP traffic in Ubuntu in the Network Security Group. Finally, I disable the non-stop ping in Windows.
+I filter to SSH traffic only from the Windows VM. I go to Windows PowerShell and enter the command "ssh labuser@(private ip address). I observe the SSH traffic on Wireshark and then exit the connection on PowerShell. I go back to Wireshark and filter by DHCP traffic only from the Windows VM to the Linux VM. Similarly when I filtered by SSH traffic, I go to Windows PowerShell and enter the command "ipconfig /renew". I observe what happens and I see the configuration of the Linux VM. I then exit from DHCP in PowerShell.
 </p>
 <br />
