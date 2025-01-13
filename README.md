@@ -5,11 +5,6 @@
 <h1>Network Security Groups (NSGs) and Inspecting Traffic Between Azure Virtual Machines</h1>
 In this tutorial, we observe various network traffic to and from Azure Virtual Machines with Wireshark as well as experiment with Network Security Groups. <br />
 
-
-<h2>Video Demonstration</h2>
-
-- ### [YouTube: Azure Virtual Machines, Wireshark, and Network Security Groups](https://www.youtube.com)
-
 <h2>Environments and Technologies Used</h2>
 
 - Microsoft Azure (Virtual Machines/Compute)
@@ -21,7 +16,7 @@ In this tutorial, we observe various network traffic to and from Azure Virtual M
 <h2>Operating Systems Used </h2>
 
 - Windows 10 (21H2)
-- Ubuntu Server 20.04
+- Ubuntu Server 22.04
 
 <h2>High-Level Steps</h2>
 
@@ -36,7 +31,7 @@ In this tutorial, we observe various network traffic to and from Azure Virtual M
 <img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-In Step 1, I create a Microsoft Azure account and create a resource group. Within the resource group, I create two virtual machines; Windows 10 and Linux. I ensure both VMs are in the same subnet and virtual network so they work properly and are in sync with one another.
+In this project, I create a resource group named RG-Network-Activities. Within the resource group, I create two virtual machines; Windows 10 and Linux. I ensure both VMs are in the same subnet and virtual network so they work properly and are in sync with one another. After they are created, I log into the Windows VM and install Wireshark.
 </p>
 <br />
 
@@ -44,7 +39,7 @@ In Step 1, I create a Microsoft Azure account and create a resource group. Withi
 <img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-In Step 2, I use the Windows 10 Virtual Machine to install Wireshark. Next I filter to ICMP traffic only, then go to the Linux VM and attempt to ping it from within the Windows 10 VM. I observe the ping requests and replies in Wireshark. Finally, I open a command line in the Windows 10 VM and ping a public website and observe the traffic in Wireshark.
+Next, after I install Wireshark, I filter to ICMP traffic only, then connect to the Linux VM and attempt to ping it from within the Windows 10 VM. I observe the ping requests and replies in Wireshark. Finally, I open a command line in the Windows 10 VM and ping a public website and observe the traffic in Wireshark.
 </p>
 <br />
 
