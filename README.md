@@ -44,7 +44,7 @@ After I install Wireshark, I filter to ICMP traffic only, then connect to the Li
 <br />
 
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"> <img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://github.com/robertgetino/azure-network-protocols/blob/fe1efde48c89bf7adf3924a846a96cd97e6e91c1/ssh.png" height="80%" width="80%" alt="Disk Sanitization Steps"> <img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
 I filter to SSH traffic only from the Windows VM. I go to Windows PowerShell and enter the command "ssh labuser@(private ip address). I observe the SSH traffic on Wireshark and then exit the connection on PowerShell. I go back to Wireshark and filter by DHCP traffic only from the Windows VM to the Linux VM. Similarly when I filtered by SSH traffic, I go to Windows PowerShell and enter the command "ipconfig /renew". I observe what happens and I see the configuration of the Linux VM. I then exit from DHCP in PowerShell.
